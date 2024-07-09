@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+		<link rel="stylesheet" type="text/css" href="Css/Reset.css" />
+		<link rel="stylesheet" type="text/css" href="Style.css" />
+		<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,400&f[]=stardom@400&f[]=montserrat@400&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+		<title>Encriptador - Alura</title>
+	</head>
+	<body>
+		<main>
+			<section class="logoSection">
+				<div class="header">
+					<div class="logoContainer">
+						<img
+							class="logoContent"
+							src="Images/Logo.png"
+							alt="Logo de Alura color azul obscuro"/>
+					</div>
+					<div class="linkDarkMode">
+						<div class="gitHubIcon">
+							<a href="https://github.com/jeanpsx/" target="_blank">
+								<i class="fa-brands fa-square-github"></i>
+							</a>
+						</div>
+						<div class="linkedInIcon">
+							<a href="https://www.linkedin.com/in/jean-carrizo-54b4a218b/" target="_blank">
+								<i class="fa-brands fa-linkedin"></i>
+							</a>
+						</div>
+						<button class="buttonDark" id="buttonDark">
+							<span><i class="fa-solid fa-cloud-sun"></i></span>
+							<span><i class="fa-solid fa-cloud-moon"></i></span>
+						</button>
+					</div>
+				</div>
+				<div class="textAreaContainer">
+					<textarea
+						placeholder="Digita tu mensaje aquí"
+						name="textArea"
+						id="textArea"></textarea>
+					<div class="textAreaWarning">
+						<span class="textAreaWarningSign">&#33</span>
+						Solo se permiten letras minúsculas y sin acentos
+					</div>
+				</div>
+				<div class="buttonsContainer">
+					<div class="buttonsContent">
+						<button onclick="encrypt()" id="buttonEncrypter">Encriptar</button>
+						<button onclick="desEncrypt()" id="buttonDesencrypter">Desencriptar</button>
+					</div>
+				</div>
+			</section>
+			<section class="viewerSection">
+				<div class="encryptEmpty" id="encryptEmpty">
+					<div class="encryptImage">
+						<img
+							src="Images/Muñeco.png"
+							alt="Personaje de camisa y cabello azul, con pantalon blanco y zapatos negros, arrodillado sosteniendo una lupa a 90° en la mano derecha, observando un diamante con curiosidad, como si estuviese buscando algo"/>
+					</div>
+					<div class="encryptEmptyMessage">
+						<h2>Ningún mensaje fue encontrado</h2>
+						<p>Ingresa el texto que desees encriptar o desencriptar.</p>
+					</div>
+				</div>
+				<div class="encrypterResult" id="encrypterResult">
+					<div class="encrypterText">
+						<p id="textEncrypt"></p>
+					</div>
+					<div class="buttonContainer">
+						<button onclick="copyText()" id="buttonCopy">Copiar</button>
+						<button onclick="reset()" id="buttonReset">Reset</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<p>Web de Encriptación. By: Umigwen | Email: jeandell2009@gmail.com - &COPY Copyright - Encrypter Challenge - Oracle One & Alura Latam 2024</p>
+		</footer>
+		<script src="Main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/a307cda0b0.js" crossorigin="anonymous"></script>
+	</body>
+</html>
